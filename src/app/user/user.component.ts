@@ -7,14 +7,15 @@ import { ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  id: number;
+  public id: number;
 
-  constructor(private route: ActivatedRoute) {
-  }
+  constructor(private route: ActivatedRoute) {}
 
-  ngOnInit() {
+  public ngOnInit() {
+
     this.route.params.subscribe((params: Params) => {
       this.id = +params.id;
     });
+
   }
 }
